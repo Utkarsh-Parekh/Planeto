@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primary"
+    tools:context=".planet_details">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/galaxy"
+        android:adjustViewBounds="true"
+        android:scaleY="1.5"
+        android:scaleX="1.5"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="-20dp"
+        >
+        
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/earth"
+            android:elevation="30dp"
+            android:layout_gravity="center"
+            android:id="@+id/planet_detail_img"
+            />
+        
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height = "match_parent"
+            app:cardElevation="20dp"
+            android:layout_marginTop="-60dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/secondary"
+            >
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:gravity="center"
+               android:paddingTop="60dp">
+
+               <TextView
+                   android:id="@+id/planet_name_detail"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textAlignment="center"
+                   android:fontFamily="sans-serif-medium"
+                   android:text="Earth"
+                   android:textColor="#fff"
+                   android:textSize="24dp"
+                   />
+
+
+               <TextView
+                   android:id="@+id/planet_sub_detail"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Galaxy-name"
+                   android:fontFamily="sans-serif"
+                   android:textColor="#fff"
+                   android:textSize="14dp"/>
+               
+               
+               <View
+                   android:layout_width="30dp"
+                   android:layout_height="1dp"
+                   android:background="#0288D1"
+                   android:layout_marginTop="10dp"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_distance"
+                    />
+
+                <TextView
+                    android:id="@+id/planet_distance_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Distance"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                  android:layout_marginStart="5dp"
+                    />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_gravity"
+                    android:layout_marginLeft="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/planet_gravity_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gravity"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:layout_marginRight="5dp"
+                    />
+
+            </LinearLayout>
+
+           </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/primary"
+        android:layout_marginTop="5dp">
+
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="overview"
+                    android:fontFamily="@font/poppins"
+                    android:textAllCaps="true"
+                    android:textColor="#fff"
+                    android:letterSpacing="0.1"
+                    />
+
+                <TextView
+                    android:id="@+id/overview_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:text="Mars is sometimes called the Red Planet. It's red because of rusty iron in the ground. Like Earth, Mars has seasons, polar ice caps, volcanoes, canyons, and weather. It has a very thin atmosphere made of carbon dioxide, nitrogen, and argon.Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System"
+                    android:fontFamily="sans-serif"
+                    android:textColor="#fff"
+                    android:letterSpacing="0.1"
+                    />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <TextView
+            android:id="@+id/home_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Go to Home Page"
+            android:textColor="#fff"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:fontFamily="sans-serif-black"
+            android:background="@drawable/bg_color"/>
+    </LinearLayout>
+
+</LinearLayout>
